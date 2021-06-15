@@ -22,5 +22,8 @@
 
 ![4](https://user-images.githubusercontent.com/52160632/122100978-706f6500-ce31-11eb-85f9-bb123bec8506.png)
 
+## Image Augmentation
+#### Deep networks need large amount of training data to achieve good performance. To build a powerful image classifier using very little training data, image augmentation is usually required to boost the performance of deep networks. Image augmentation artificially creates training images through different ways of processing or combination of multiple processing, such as random rotation, shifts, shear and flips, etc.
+
 
 
