@@ -28,6 +28,7 @@
 # Model
 ![Screenshot (101)](https://user-images.githubusercontent.com/52160632/122267008-0b327700-cef8-11eb-870b-6d5b08a4dbdb.png)
 
+#### As we can see the model summary in which the entire model structure is shown in which the first convolutional layer is created with 128,128,3 size with the ReLu activation function. After the convolutional layer there is a Max pooling layer with the pool size of 2,2. There are 3 convolutional layers and max pooling layer with some dropout of 10% and 20% and at the last stages of the layer there is a flatten layer to flatten the data so that we can get the output in the dense layer with the help of sigmoid function.
 
 
 
