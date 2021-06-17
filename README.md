@@ -30,5 +30,16 @@
 
 #### As we can see the model summary in which the entire model structure is shown in which the first convolutional layer is created with 128,128,3 size with the ReLu activation function. After the convolutional layer there is a Max pooling layer with the pool size of 2,2. There are 3 convolutional layers and max pooling layer with some dropout of 10% and 20% and at the last stages of the layer there is a flatten layer to flatten the data so that we can get the output in the dense layer with the help of sigmoid function.
 
+![Screenshot (103)](https://user-images.githubusercontent.com/52160632/122449694-c83dd580-cfc3-11eb-897d-4c627cff767a.png)
+#### As we can see model performance and our model gives 96.53% accuracy in the training set and 90.06% in the test set with the training loss of 0.09 and test loss of 0.37.
+#### We can see the graph of model’s training accuracy vs test accuracy and training loss vs test loss in all the 25 epochs in which our model is trained. Model accuracy is slightly increasing in every epoch and model loss is decreasing in epochs. 
+
+![5](https://user-images.githubusercontent.com/52160632/122449841-f0c5cf80-cfc3-11eb-8f35-1920138ec4eb.png)
+
+### Model Output
+
+
+
+
 
 
