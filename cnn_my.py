@@ -10,11 +10,11 @@ from keras.layers import Dense
 #Initialising the Convolutional Neural Network
 classifier = Sequential()
 
-# Step 1 - Convolution
+# Step 1 - Convolution layer
 classifier.add(Convolution2D(32,(3,3), input_shape = (64,64,3),
                              activation = 'relu'))
 
-# Step 2 - Pooling
+# Step 2 - Pooling layer
 classifier.add(MaxPooling2D(pool_size = (2,2)))
 
 #Adding the second cinvolution layer
