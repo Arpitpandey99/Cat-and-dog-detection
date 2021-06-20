@@ -60,7 +60,7 @@ classifier.fit_generator(training_set,
                          validation_steps = (2000/32))
 
 
-# Predicting result 
+# Predicting the result 
 from keras.preprocessing import image
 import numpy as np
 test_image = image.load_img('dataset/single_prediction/cat_or_dog_1.jpg',
