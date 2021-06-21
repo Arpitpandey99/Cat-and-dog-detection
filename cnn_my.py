@@ -43,7 +43,7 @@ train_datagen = ImageDataGenerator(rescale = 1./255,
 
 test_datagen = ImageDataGenerator(rescale = 1./255)
 
-training_set = train_datagen.flow_from_directory('dataset/training_set',
+training_set = train_datagen.flow_from_directory('E://Data\Deep_Learning_A_Z//Volume 1 - Supervised Deep Learning//Part 2 - Convolutional Neural Networks (CNN)//Section 8 - Building a CNN//cat-and-dog-detection//dataset//training_set',
                                                  target_size = (64,64),
                                                  batch_size = 32,
                                                  class_mode = 'binary')
