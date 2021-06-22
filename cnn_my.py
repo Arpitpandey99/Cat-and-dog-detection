@@ -53,7 +53,7 @@ test_set = test_datagen.flow_from_directory('E://Data//Deep_Learning_A_Z//Volume
                                             batch_size = 32,
                                             class_mode = 'binary')
 
-classifier.fit_generator(training_set,
+history = classifier.fit_generator(training_set,
                          steps_per_epoch = (8000/32),
                          epochs = 25,
                          validation_data = test_set,
@@ -73,3 +73,5 @@ if result[0][0] == 1:
     prediction = 'dog'
 else:
     prediction = 'cat'
+
+
