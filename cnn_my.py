@@ -45,21 +45,21 @@ test_datagen = ImageDataGenerator(rescale = 1./255)
 
 training_set = train_datagen.flow_from_directory('E://Data\Deep_Learning_A_Z//Volume 1 - Supervised Deep Learning//Part 2 - Convolutional Neural Networks (CNN)//Section 8 - Building a CNN//cat-and-dog-detection//dataset//training_set',
                                                  target_size = (64,64),
-                                                 batch_size = 32,
+                                                 batch_size = 64,
                                                  class_mode = 'binary')
 
 test_set = test_datagen.flow_from_directory('E://Data//Deep_Learning_A_Z//Volume 1 - Supervised Deep Learning//Part 2 - Convolutional Neural Networks (CNN)//Section 8 - Building a CNN//cat-and-dog-detection//dataset//test_set',
                                             target_size = (64,64),
-                                            batch_size = 32,
+                                            batch_size = 64,
                                             class_mode = 'binary')
 
 history = classifier.fit_generator(training_set,
-                         steps_per_epoch = (8000/32),
-                         epochs = 25,
+                         steps_per_epoch = (8000/64),
+                         epochs = 10,
                          validation_data = test_set,
-                         validation_steps = (2000/32))
+                         validation_steps = (2000/64))
 
-
+print(history)
 # Predicting the result 
 from keras.preprocessing import image
 import numpy as np
@@ -75,3 +75,13 @@ else:
     prediction = 'cat'
 
 
+import matplotlib.pyplot as plt
+fig1, ax1 = plt.subplots(1,2,figsize = (20,5))
+    
+for i,j in enumerate(['accuracy','loss']):
+    ax1[i].plot(history.history[j],'o-',color = 'green')
+    ax1[i].plot(history.history['val_'+j],'o-',color = '#D66520')
+    ax1[i].set_title('Model '+str(j))
+    ax1[i].set_xlabel('epochs')
+    ax1[i].set_ylabel(j)
+    ax1[i].legend(['train','val'])
